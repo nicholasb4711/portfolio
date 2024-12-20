@@ -6,9 +6,19 @@ export interface Project {
   liveUrl?: string;
   image?: string;
   featured?: boolean;
+  stars?: number;
+  language?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  size?: number;
+  branch?: string;
+  issues?: number;
+  watchers?: number;
+  license?: string;
 }
 
-export const projects: Project[] = [
+// Keep this for featured projects that you want to customize
+export const featuredProjects: Project[] = [
   {
     title: "Portfolio Website",
     description: "Personal portfolio built with Next.js, TypeScript, and Tailwind CSS. Features responsive design and dark mode support.",
@@ -17,5 +27,4 @@ export const projects: Project[] = [
     liveUrl: "https://nicholasbyrne.dev",
     featured: true
   },
-  // Add more projects...
 ]; 

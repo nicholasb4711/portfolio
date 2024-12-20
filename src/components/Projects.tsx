@@ -1,13 +1,11 @@
 'use client';
 
-import { projects } from '@/data/projects';
+import { featuredProjects } from '@/data/projects';
 import Link from 'next/link';
 import { ProjectCard } from './ProjectCard';
 import FadeIn from './animations/FadeIn';
 
 export default function Projects() {
-  const featuredProjects = projects.filter(project => project.featured);
-
   return (
     <section id="projects" className="min-h-screen py-20 bg-card">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

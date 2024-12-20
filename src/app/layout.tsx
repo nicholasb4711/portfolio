@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from '@/context/ThemeContext';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.className} overflow-x-hidden`}>
-        <ThemeProvider>
           {children}
-        </ThemeProvider>
       </body>
     </html>
   );
