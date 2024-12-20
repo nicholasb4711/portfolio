@@ -10,19 +10,18 @@ interface AnimatedButtonProps {
 
 export default function AnimatedButton({ href, children, className }: AnimatedButtonProps) {
   return (
-    <motion.a
-      href={href}
-      className={`${className} inline-block`}
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ 
-        duration: 0.2,
-        initial: { delay: 0.6, duration: 0.5 }
-      }}
+      transition={{ delay: 0.6, duration: 0.5 }}
+      className="mt-8"
     >
-      {children}
-    </motion.a>
+      <a
+        href={href}
+        className={`${className} transform hover:scale-105 active:scale-95`}
+      >
+        {children}
+      </a>
+    </motion.div>
   );
 } 
