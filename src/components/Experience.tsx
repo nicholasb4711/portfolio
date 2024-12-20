@@ -9,29 +9,29 @@ export default function Experience() {
     <section id="experience" className="min-h-screen py-20 bg-secondary">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
-          <h2 className="text-3xl font-bold mb-12">Experience</h2>
+          <h2 className="text-3xl font-bold mb-12 text-secondary-foreground">Experience</h2>
         </FadeIn>
         
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <SlideIn key={index} delay={index * 0.2} direction={index % 2 === 0 ? 'left' : 'right'}>
               <div className="relative pl-8 border-l-2 border-primary">
-                <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-2" />
+                <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-2" />
                 
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+                <div className="bg-card text-card-foreground p-6 rounded-lg shadow-md">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-semibold">{exp.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">{exp.company}</p>
+                      <p className="text-muted-foreground">{exp.company}</p>
                     </div>
-                    <span className="text-gray-500 dark:text-gray-400 text-sm mt-2 md:mt-0">
+                    <span className="text-muted-foreground text-sm mt-2 md:mt-0">
                       {exp.period}
                     </span>
                   </div>
                   
                   <ul className="list-disc list-inside space-y-2 mb-4">
                     {exp.description.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-gray-600 dark:text-gray-300">
+                      <li key={itemIndex} className="text-muted-foreground">
                         {item}
                       </li>
                     ))}
@@ -41,7 +41,7 @@ export default function Experience() {
                     {exp.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                        className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm"
                       >
                         {tech}
                       </span>

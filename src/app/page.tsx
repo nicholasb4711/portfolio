@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import FadeIn from '@/components/animations/FadeIn';
+import AnimatedButton from '@/components/animations/AnimatedButton';
 import Navbar from '@/components/Navbar'
 import About from '@/components/About'
 import Projects from '@/components/Projects'
@@ -32,19 +32,12 @@ export default function Home() {
               </p>
             </FadeIn>
             
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-              className="mt-8"
+            <AnimatedButton 
+              href="#about"
+              className="p-5 m-10 inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg border border-primary hover:bg-primary hover:text-accent-foreground hover:border-accent transition-colors"
             >
-              <a
-                href="#about"
-                className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-accent transition-colors"
-              >
-                Learn More
-              </a>
-            </motion.div>
+              Learn More
+            </AnimatedButton>
           </div>
         </section>
 

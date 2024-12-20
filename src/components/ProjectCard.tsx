@@ -23,7 +23,7 @@ export function ProjectCard({ project }: { project: Project }) {
       
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
+        <p className="text-muted-foreground mb-4">
           {project.description}
         </p>
         
@@ -32,7 +32,7 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.technologies.map((tech, techIndex) => (
               <span
                 key={techIndex}
-                className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm"
+                className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm"
               >
                 {tech}
               </span>
@@ -46,7 +46,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               GitHub
             </a>
@@ -56,7 +56,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               Live Demo
             </a>

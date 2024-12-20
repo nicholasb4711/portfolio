@@ -4,7 +4,7 @@ import FadeIn from './animations/FadeIn';
 
 export default function About() {
   return (
-    <section id="about" className="min-h-screen py-20 bg-secondary">
+    <section id="about" className="py-20 bg-[#60a5fa] dark:bg-gray-900">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
