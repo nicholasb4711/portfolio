@@ -1,11 +1,15 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { Project } from '@/data/projects';
 import Image from 'next/image';
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+    <motion.div
+      whileHover={{ y: -5 }}
+      className="bg-secondary text-secondary-foreground rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+    >
       {project.image && (
         <div className="h-48 relative">
           <Image 
@@ -59,6 +63,6 @@ export function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 } 
