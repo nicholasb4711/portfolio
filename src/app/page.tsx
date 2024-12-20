@@ -136,8 +136,8 @@ export default function Home() {
         </section>
 
         <About />
-        <Projects />
         <Experience />
+        <Projects />
         <Contact />
       </div>
     </>
