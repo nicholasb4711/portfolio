@@ -7,56 +7,99 @@ import SlideIn from './animations/SlideIn';
 export default function Experience() {
   return (
     <section id="experience" className="py-32 bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
-          <h2 className="text-4xl font-bold mb-16 text-foreground tracking-tight">
+          <h2 className="text-4xl font-bold mb-16 text-foreground tracking-tight text-center">
             Experience
           </h2>
         </FadeIn>
         
-        <div className="space-y-16">
-          {experiences.map((exp, index) => (
-            <SlideIn key={index} delay={index * 0.2} direction={index % 2 === 0 ? 'left' : 'right'}>
-              <div className="relative pl-8 border-l-2 border-primary/20 hover:border-primary transition-colors">
-                <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-2 shadow-lg" />
-                
-                <div className="bg-card text-card-foreground p-8 lg:p-10 rounded-2xl shadow-lg hover-card">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
-                    <div>
-                      <h3 className="text-2xl font-bold tracking-tight">{exp.title}</h3>
-                      <p className="text-muted-foreground mt-1">{exp.company}</p>
-                    </div>
-                    <span className="text-primary mt-2 lg:mt-0 font-medium">
-                      {exp.period}
-                    </span>
+        <div className="relative">
+          {/* Main timeline line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-foreground/20 z-0" />
+          
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <SlideIn 
+                key={index} 
+                delay={index * 0.3} 
+                direction={index % 2 === 0 ? 'left' : 'right'}
+              >
+                <div className={`relative flex items-center justify-center min-h-[2rem] ${
+                  index % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'
+                }`}>
+                  {/* Timeline connector */}
+                  <div 
+                    className={`hidden lg:block absolute top-1/2 -translate-y-1/2 z-10 ${
+                      index % 2 === 0 
+                        ? 'right-[calc(50%-1rem)] left-auto w-[calc(50%-4rem)]' 
+                        : 'left-[calc(50%-1rem)] right-auto w-[calc(50%-4rem)]'
+                    }`}
+                  >
+                    <div className={`h-[2px] w-full ${
+                      index % 2 === 0
+                        ? 'bg-gradient-to-l from-foreground/30 to-transparent'
+                        : 'bg-gradient-to-r from-foreground/30 to-transparent'
+                    }`} />
                   </div>
-                  
-                  <ul className="list-none space-y-4 mb-8">
-                    {exp.description.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-card-foreground/80 flex items-start text-base leading-relaxed">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2.5"></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="border-t border-border pt-6">
-                    <h4 className="text-sm font-medium text-muted-foreground mb-4">Technologies Used</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-4 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium hover:bg-primary/20 transition-colors"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+
+                  {/* Timeline dot with rings */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-8 h-8 z-20">
+                    <div className="absolute w-6 h-6 bg-primary/10 rounded-full" />
+                    <div className="relative w-4 h-4 bg-primary rounded-full shadow-lg">
+                      <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-25" />
+                    </div>
+                  </div>
+
+                  {/* Content card */}
+                  <div className={`relative w-full lg:w-[calc(70%-2rem)] z-30 ${
+                    index % 2 === 0 ? 'lg:mr-8' : 'lg:ml-8'
+                  }`}>
+                    <div className="bg-card text-card-foreground p-6 rounded-2xl shadow-lg hover-card">
+                      <div className="flex flex-col mb-4">
+                        <div className="flex items-start justify-between">
+                          <div>
+                            <h3 className="text-xl font-bold tracking-tight">{exp.title}</h3>
+                            <p className="text-muted-foreground text-sm">{exp.company}</p>
+                          </div>
+                          <span className="text-primary text-sm font-medium whitespace-nowrap ml-4">
+                            {exp.period}
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <ul className="list-none space-y-2 mb-4">
+                        {exp.description.map((item, itemIndex) => (
+                          <li key={itemIndex} className="text-card-foreground/80 flex items-start text-sm leading-relaxed pl-4 relative">
+                            {/* Bullet point */}
+                            <span className="absolute left-0 top-[0.6rem] w-1.5 h-1.5 bg-primary rounded-full" />
+                            
+                            {/* Description text */}
+                            <span className="flex-1">
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      <div className="border-t border-border pt-4">
+                        <div className="flex flex-wrap gap-1.5">
+                          {exp.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className=" gradient-button-sm px-2.5 py-1 bg-accent/10 text-accent border border-accent/20 rounded-full text-xs font-medium hover:bg-accent/20 transition-colors"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SlideIn>
-          ))}
+              </SlideIn>
+            ))}
+          </div>
         </div>
       </div>
     </section>

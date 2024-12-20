@@ -11,7 +11,7 @@ interface ScaleInProps {
 export default function ScaleIn({ children, delay = 0 }: ScaleInProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { 
-    once: false, 
+    once: true, 
     margin: "-100px",
     amount: 0.3
   });

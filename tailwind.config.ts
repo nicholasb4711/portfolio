@@ -37,6 +37,9 @@ export default {
       borderColor: {
         DEFAULT: "var(--border)",
       },
+      willChange: {
+        'transform-opacity': 'transform, opacity',
+      }
     },
   },
   plugins: [],

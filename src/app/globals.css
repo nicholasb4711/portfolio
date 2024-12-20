@@ -61,6 +61,12 @@ body {
   border: none;
 }
 
+.gradient-button-sm {
+  background: linear-gradient(to right, var(--primary), #166ad2);
+  color: white;
+  border: none;
+}
+
 /* Kajo-style card hover effect */
 .hover-card {
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
@@ -131,4 +137,10 @@ body {
   fill: var(--foreground);
   stroke: var(--foreground);
   opacity: 0.7;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
