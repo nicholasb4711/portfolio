@@ -3,24 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* Light theme - Kajo inspired */
-  --background: #fafafa;
-  --foreground: #111111;
-  --primary: #0055FF;
-  --primary-foreground: #ffffff;
-  --secondary: #f5f5f5;
-  --secondary-foreground: #111111;
-  --accent: #0055FF;
-  --accent-foreground: #ffffff;
-  --muted: #f0f0f0;
-  --muted-foreground: #666666;
-  --border: #e5e5e5;
-  --card: #ffffff;
-  --card-foreground: #111111;
-}
-
-:root[class~="dark"] {
-  /* Dark theme - Kajo inspired */
+  /* Dark theme by default - Kajo inspired */
   --background: #111111;
   --foreground: #ffffff;
   --primary: #0055FF;
@@ -34,6 +17,23 @@
   --border: #2a2a2a;
   --card: #1a1a1a;
   --card-foreground: #ffffff;
+}
+
+:root[class~="light"] {
+  /* Light theme moved to optional class */
+  --background: #fafafa;
+  --foreground: #111111;
+  --primary: #0055FF;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #111111;
+  --accent: #0055FF;
+  --accent-foreground: #ffffff;
+  --muted: #f0f0f0;
+  --muted-foreground: #666666;
+  --border: #e5e5e5;
+  --card: #ffffff;
+  --card-foreground: #111111;
 }
 
 body {
@@ -109,6 +109,7 @@ body {
 .bg-grid-pattern {
   background-image: radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0);
   background-size: 40px 40px;
+  background-color: #2a2a2a
 }
 
 @keyframes float-doodle {
@@ -131,12 +132,28 @@ body {
   animation: float-doodle 4s ease-in-out infinite alternate;
 }
 
+/* Target all SVG elements within .sqD */
+.sqD svg,
 .sqD path,
 .sqD circle,
-.sqD ellipse {
-  fill: var(--foreground);
-  stroke: var(--foreground);
-  opacity: 0.7;
+.sqD ellipse,
+.sqD image {
+  fill: var(--primary-foreground) !important;
+  stroke: var(--primary-foreground) !important;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px var(--primary));
+}
+
+/* Hover effects */
+.sqD:hover svg,
+.sqD:hover path,
+.sqD:hover circle,
+.sqD:hover ellipse,
+.sqD:hover image {
+  fill: #60a5fa !important;
+  stroke: #60a5fa !important;
+  opacity: 1;
+  filter: drop-shadow(0 0 12px var(--primary));
 }
 
 .gpu-accelerated {
