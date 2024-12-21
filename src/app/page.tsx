@@ -46,7 +46,7 @@ export default function Home() {
             
             <AnimatedButton 
               href="#about"
-              className="mt-12 shadow-sm hover:shadow-xl gradient-button inline-flex items-center px-7 py-5 rounded-full font-medium text-sm hover:bg-primary/90 transition-all duration-200"
+              className="mt-12 shadow-sm hover:shadow-xl gradient-button inline-flex items-center px-7 py-5 rounded-full font-medium transition-all duration-200"
             >
               Learn More
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

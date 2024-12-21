@@ -14,11 +14,11 @@ export default function AnimatedButton({ href, children, className }: AnimatedBu
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.6, duration: 0.5 }}
-      className="mt-8"
+      className="mt-2"
     >
       <a
         href={href}
-        className={`${className} transform hover:scale-105 active:scale-95`}
+        className={`${className} transform hover:scale-110 active:scale-90`}
       >
         {children}
       </a>
