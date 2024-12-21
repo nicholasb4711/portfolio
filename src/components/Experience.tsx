@@ -87,7 +87,7 @@ export default function Experience() {
                           {exp.technologies.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className=" gradient-button-sm px-2.5 py-1 bg-accent/10 text-accent border border-accent/20 rounded-full text-xs font-medium hover:bg-accent/20 transition-colors"
+                              className="gradient-button px-2.5 py-1 bg-accent text-secondary-foreground border border-accent rounded-full text-xs font-medium hover:bg-accent/20 transition-colors"
                             >
                               {tech}
                             </span>

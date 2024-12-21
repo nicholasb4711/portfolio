@@ -32,13 +32,13 @@ export default function Home() {
             </FadeIn>
             
             <FadeIn delay={0.2}>
-              <p className="text-2xl mb-8 text-muted-foreground font-medium">
+              <p className="text-2xl mb-8 text-foreground font-medium">
                 Software Developer | Computer Science Student
               </p>
             </FadeIn>
             
             <FadeIn delay={0.4}>
-              <p className="text-lg max-w-2xl mx-auto text-foreground/80 leading-relaxed">
+              <p className="text-lg max-w-2xl mx-auto text-muted-foreground leading-relaxed">
                 Welcome! I&apos;m a passionate software developer specializing in full-stack development
                 with expertise in frontend technologies.
               </p>
@@ -46,7 +46,7 @@ export default function Home() {
             
             <AnimatedButton 
               href="#about"
-              className="mt-12 shadow-sm hover:shadow-xl gradient-button inline-flex items-center px-7 py-5 bg-primary text-primary-foreground rounded-full font-medium text-sm hover:bg-primary/90 transition-all duration-200"
+              className="mt-12 shadow-sm hover:shadow-xl gradient-button inline-flex items-center px-7 py-5 rounded-full font-medium text-sm hover:bg-primary/90 transition-all duration-200"
             >
               Learn More
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

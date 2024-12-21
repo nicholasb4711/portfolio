@@ -15,14 +15,14 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-16">
           <div className="space-y-8">
             <FadeIn delay={0.2}>
-              <p className="text-lg text-secondary-foreground/90 leading-relaxed">
+              <p className="text-lg text-secondary-foreground leading-relaxed">
                 As a senior Computer Science student at Northeastern University, I&apos;ve developed
                 a strong foundation in full-stack development with particular expertise in frontend
                 technologies.
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <p className="text-lg text-secondary-foreground/90 leading-relaxed">
+              <p className="text-lg text-secondary-foreground leading-relaxed">
                 My journey in software development has been driven by a passion for creating
                 elegant solutions to complex problems. I specialize in modern web technologies
                 including React, TypeScript, and Next.js.
@@ -37,7 +37,7 @@ export default function About() {
               </h3>
               <div className="grid grid-cols-2 gap-10">
                 <div>
-                  <h4 className="font-medium mb-6 text-card-foreground/90">Frontend</h4>
+                  <h4 className="font-medium mb-6 text-card-foreground">Frontend</h4>
                   <ul className="space-y-4">
                     {["React", "TypeScript", "Next.js", "Tailwind CSS"].map((skill, index) => (
                       <li key={index} className="flex items-center text-muted-foreground">
@@ -48,7 +48,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-6 text-card-foreground/90">Backend</h4>
+                  <h4 className="font-medium mb-6 text-card-foreground">Backend</h4>
                   <ul className="space-y-4">
                     {["Node.js", "Python", "Java", "SQL"].map((skill, index) => (
                       <li key={index} className="flex items-center text-muted-foreground">
