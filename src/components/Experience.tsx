@@ -9,14 +9,14 @@ export default function Experience() {
     <section id="experience" className="py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
-          <h2 className="text-4xl font-bold mb-16 text-foreground tracking-tight text-center">
-            Experience
+          <h2 className="text-4xl font-bold mb-8 pl-8 text-foreground tracking-tight text-start">
+            Work Experience
           </h2>
         </FadeIn>
         
         <div className="relative">
           {/* Main timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-foreground/20 z-0" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-foreground z-0" />
           
           <div className="space-y-8">
             {experiences.map((exp, index) => (
@@ -38,14 +38,14 @@ export default function Experience() {
                   >
                     <div className={`h-[2px] w-full ${
                       index % 2 === 0
-                        ? 'bg-gradient-to-l from-foreground/30 to-transparent'
-                        : 'bg-gradient-to-r from-foreground/30 to-transparent'
+                        ? 'bg-gradient-to-l from-foreground to-transparent'
+                        : 'bg-gradient-to-r from-foreground to-transparent'
                     }`} />
                   </div>
 
                   {/* Timeline dot with rings */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-8 h-8 z-20">
-                    <div className="absolute w-6 h-6 bg-primary/10 rounded-full" />
+                    <div className="absolute w-6 h-6 bg-primary rounded-full" />
                     <div className="relative w-4 h-4 bg-primary rounded-full shadow-lg">
                       <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-25" />
                     </div>

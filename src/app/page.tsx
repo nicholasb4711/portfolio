@@ -45,7 +45,7 @@ export default function Home() {
             </FadeIn>
             
             <AnimatedButton 
-              href="#about"
+              href="#experience"
               className="mt-12 shadow-sm hover:shadow-xl gradient-button inline-flex items-center px-7 py-5 rounded-full font-medium transition-all duration-200"
             >
               Learn More
@@ -56,9 +56,10 @@ export default function Home() {
           </div>
         </section>
 
-        <About />
+        
         <Experience />
         <Projects />
+        <About />
         <Contact />
       </div>
     </>

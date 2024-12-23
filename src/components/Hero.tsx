@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="text-[#60a5fa]">
       <Image
-        className="sqD w-16 absolute top-20 right-[20%] opacity-80 animate-float-doodle"
+        className="sqD w-16 absolute top-20 right-[20%] opacity-80 animate-float"
         style={{ animationDelay: "0s" }}
         src="/static/logos/hero/react.svg"
         alt="React"
@@ -12,7 +12,7 @@ export default function Hero() {
         height={64}
       />
       <Image
-        className="sqD w-12 absolute top-40 right-[10%] animate-float-doodle"
+        className="sqD w-12 absolute top-40 right-[10%] animate-float"
         style={{ animationDelay: "0.2s" }}
         src="/static/logos/hero/nextjs.svg"
         alt="Next.js"
@@ -20,7 +20,7 @@ export default function Hero() {
         height={48}
       />
       <Image
-        className="sqD w-16 absolute bottom-20 left-[15%] animate-float-doodle"
+        className="sqD w-16 absolute bottom-20 left-[15%] animate-float"
         style={{ animationDelay: "0.4s" }}
         src="/static/logos/hero/typescript.svg"
         alt="TypeScript"
