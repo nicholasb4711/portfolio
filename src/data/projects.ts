@@ -31,7 +31,7 @@ export const featuredProjects: Project[] = [
     title: "Life Manager",
     description: "LifeManager is a personal project that I'm building to help me manage my life, as well as clients lives, specifically by creating workout, nutrition, and sleep plans for them. The platform includes an e-commerce component for fitness accessories and supplements.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/nicholasb4711/portfolio",
+    githubUrl: "https://github.com/nicholasb4711/LifeManager",
     liveUrl: "https://nicholasbyrne.dev",
     featured: true
   }

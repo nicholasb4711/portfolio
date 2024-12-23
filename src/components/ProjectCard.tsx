@@ -35,7 +35,7 @@ export function ProjectCard({ project }: { project: Project }) {
       
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
-          <h3 className="text-xl font-medium tracking-tight">{project.title}</h3>
+          <h3 className="text-xl font-medium text-secondary-foreground tracking-tight">{project.title}</h3>
           <div className="flex items-center space-x-3">
             {project.stars !== undefined && (
               <div className="flex items-center text-muted-foreground">
