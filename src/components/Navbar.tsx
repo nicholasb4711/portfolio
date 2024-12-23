@@ -1,10 +1,23 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const winScroll = window.scrollY;
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (winScroll / height) * 100;
+      setScrollProgress(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <nav className="fixed w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
@@ -61,6 +74,10 @@ export default function Navbar() {
             </div>
           </div>
         )}
+
+        <div className="h-0.5 bg-gradient-to-r from-primary to-accent absolute bottom-0 left-0" 
+          style={{ width: `${scrollProgress}%` }} 
+        />
       </div>
     </nav>
   );
