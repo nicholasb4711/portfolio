@@ -24,7 +24,7 @@ export default function FadeIn({ children, delay = 0, direction = 'up' }: FadeIn
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: directionOffset }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: directionOffset }}
       transition={{
         duration: 0.5,
         delay: delay,
