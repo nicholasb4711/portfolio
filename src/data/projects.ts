@@ -20,11 +20,19 @@ export interface Project {
 // Keep this for featured projects that you want to customize
 export const featuredProjects: Project[] = [
   {
+    title: "LifeWiki",
+    description: "LifeWiki is a platform that allows users to create and share their own Wiki's on any topic they want. It is built with Next.js, TypeScript, and Tailwind CSS.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/nicholasb4711/LifeWiki",
+    liveUrl: "https://nicholasbyrne.dev",
+    featured: true
+  },
+  {
     title: "Portfolio Website",
     description: "Personal portfolio built with Next.js, TypeScript, and Tailwind CSS. Features responsive design and dark mode support.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/nicholasb4711/portfolio",
-    liveUrl: "https://nicholasbyrne.dev",
+    liveUrl: "https://nick-byrne.com",
     featured: true
   },
   {

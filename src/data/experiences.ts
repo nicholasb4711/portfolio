@@ -12,11 +12,11 @@ export const experiences: Experience[] = [
         company: "RiskAverse",
         period: "Sept 2024 - Dec 2024",
         description: [
-            "Developed and maintained full-stack web applications using React and Node.js",
-            "Implemented responsive designs and improved application performance",
-            "Collaborated with cross-functional teams to deliver high-quality solutions"
+            "Developed and maintained scalable web applications using React.js, Next.js, and TypeScript, implementing dynamic UI components and responsive design with Tailwind CSS to enhance user experience across projects",
+            "Designed and implemented key features including a dynamic tagging system with real-time filtering, secure authentication flows with Supabase Auth, and dark/light mode theming with shadcn/ui components",
+            "Architected PostgreSQL database schemas and enhanced functionality with real-time activity tracking, analytics dashboards, and full-text search capabilities"
         ],
-        technologies: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "TailwindCSS", "MongoDB"]
+        technologies: ["React.js", "Next.js", "TypeScript", "Flask", "Python", "MongoDB", "PostgreSQL", "Docker", "Selenium", "Jest", "Pytest", "Tailwind CSS", "GitHub Actions", "Firebase", "Auth0"]
     },
     {
         title: "Research Technician Co-op",
