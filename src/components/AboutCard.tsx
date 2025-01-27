@@ -1,8 +1,8 @@
 export default function AboutCard() {
     const skills = {
-        frontend: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS", "JavaScript"],
-        backend: ["Node.js", "Python", "Java", "SQL", "REST APIs", "MongoDB"],
-        tools: ["Git", "VS Code", "Docker", "AWS", "Figma", "Jest"]
+        frontend: ["TypeScript", "JavaScript", "React", "Next.js", "TailwindCSS"],
+        backend: ["Node.js", "Python", "Java", "PostgreSQL", "MySQL", "MongoDB"],
+        tools:  ["Vercel", "Git", "Flask", "Docker"]
     };
 
     return (
