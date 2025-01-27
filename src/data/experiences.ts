@@ -12,11 +12,11 @@ export const experiences: Experience[] = [
         company: "RiskAverse",
         period: "Sept 2024 - Dec 2024",
         description: [
-            "Developed and maintained full-stack web applications using React and Node.js",
-            "Implemented responsive designs and improved application performance",
-            "Collaborated with cross-functional teams to deliver high-quality solutions"
+            "Developed and maintained scalable web applications using React.js, Next.js, and TypeScript, implementing dynamic UI components and responsive design with Tailwind CSS to enhance user experience across projects",
+            "Designed and implemented key features including a dynamic tagging system with real-time filtering, secure authentication flows with Supabase Auth, and dark/light mode theming with shadcn/ui components",
+            "Architected PostgreSQL database schemas and enhanced functionality with real-time activity tracking, analytics dashboards, and full-text search capabilities"
         ],
-        technologies: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "TailwindCSS", "MongoDB"]
+        technologies: ["TypeScript", "React.js", "Next.js", "Flask", "Python", "MongoDB", "PostgreSQL", "TailwindCSS"]
     },
     {
         title: "Research Technician Co-op",
@@ -41,7 +41,7 @@ export const experiences: Experience[] = [
             "Analyzed and adapted Social Media Algorithms for business use",
             "Created video and photo advertisements for clients using cameras and drones, editing in Adobe Suite"
         ],
-        technologies: ["Wix", "Weebly", "Wordpress", "Shopify", "HTML", "CSS", "JavaScript", "Premiere Pro", "Photoshop"]
+        technologies: ["JavaScript", "Wix", "Weebly", "Wordpress", "Shopify", "Premiere Pro", "Photoshop"]
     }
     // Add your experiences here
 ];
