@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
             "Designed and implemented key features including a dynamic tagging system with real-time filtering, secure authentication flows with Supabase Auth, and dark/light mode theming with shadcn/ui components",
             "Architected PostgreSQL database schemas and enhanced functionality with real-time activity tracking, analytics dashboards, and full-text search capabilities"
         ],
-        technologies: ["React.js", "Next.js", "TypeScript", "Flask", "Python", "MongoDB", "PostgreSQL", "Docker", "Selenium", "Jest", "Pytest", "Tailwind CSS", "GitHub Actions", "Firebase", "Auth0"]
+        technologies: ["TypeScript", "React.js", "Next.js", "Flask", "Python", "MongoDB", "PostgreSQL", "TailwindCSS"]
     },
     {
         title: "Research Technician Co-op",
@@ -41,7 +41,7 @@ export const experiences: Experience[] = [
             "Analyzed and adapted Social Media Algorithms for business use",
             "Created video and photo advertisements for clients using cameras and drones, editing in Adobe Suite"
         ],
-        technologies: ["Wix", "Weebly", "Wordpress", "Shopify", "HTML", "CSS", "JavaScript", "Premiere Pro", "Photoshop"]
+        technologies: ["JavaScript", "Wix", "Weebly", "Wordpress", "Shopify", "Premiere Pro", "Photoshop"]
     }
     // Add your experiences here
 ];
