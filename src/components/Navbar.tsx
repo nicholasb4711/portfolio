@@ -29,15 +29,25 @@ export default function Navbar() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {['Experience', 'Projects', 'About', 'Contact'].map((item) => (
-              <Link
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                {item}
-              </Link>
-            ))}
+            {['Experience', 'Projects', 'About', 'Resume', 'Contact'].map((item) => 
+              item === 'Resume' ? (
+                <Link
+                  key={item}
+                  href="/resume"
+                  className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  Resume
+                </Link>
+              ) : (
+                <Link
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  {item}
+                </Link>
+              )
+            )}
           </div>
 
           {/* Mobile menu button */}
