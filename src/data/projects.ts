@@ -24,7 +24,7 @@ export const featuredProjects: Project[] = [
     description: "LifeWiki is a platform that allows users to create and share their own Wiki's on any topic they want. It is built with Next.js, TypeScript, and Tailwind CSS.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/nicholasb4711/LifeWiki",
-    liveUrl: "https://nicholasbyrne.dev",
+    liveUrl: "https://life-wiki.vercel.app/",
     featured: true
   },
   {
